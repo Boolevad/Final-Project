@@ -1,0 +1,56 @@
+body {
+    height: 170px;
+    width: 270px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+}
+#rotatingImage {
+    width: 36px;
+    margin-bottom: 10px;
+}
+#plus_btn, #stop_btn {
+    width: 14px;
+}
+#play_btn {
+    width: 13px;
+}
+
+#play_btn:disabled, #stop_btn:disabled, #plus_btn:disabled {
+    opacity: 0.6; /* Example: Reduce opacity for disabled state */
+    cursor: not-allowed; /* Example: Change cursor for disabled state */
+}
+
+#activity_container #activity {
+    background: #d8d8d8;
+}
+.header { 
+    text-align: center;
+}
+
+.header img {
+    transition: transform 1s ease-in-out;
+}
+    
+.spinning {
+    animation: spin 2s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); } /* Start position */
+  100% { transform: rotate(360deg); } /* End position */
+}
+    /*transition: transform 0.5s ease;  Smooth transition for rotation 
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg); /* Start the rotation from 0 degrees 
+    }
+    to {
+      transform: rotate(360deg); /* Rotate the image 360 degrees 
+    }
+  }
+  
+.spin {
+    animation: spin 2s linear infinite; /* Apply animation to spin the image 
+}*/

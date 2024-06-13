@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="popup.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timer</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h5>Time what's important</h5>
+      <img id="rotatingImage" src="../hourglass.webp">
+    </div>
+
+    <div id="activity_container">
+      <input id="plus_btn" type="image" src="../plus.png" />
+      <input id="activity" class="activity-field" autocomplete="off" autofocus="mx-auto w-auto" name="activity" placeholder="Activity" type="text" required/>
+      <input id="play_btn" type="image" src="../play.png" disabled/>
+      <input id="stop_btn" type="image" src="../stop.png" disabled/>
+      <div id="activity1">00:00:00</div>
+    </div>
+
+  </body>
+
+  <script src="popup.js"></script>
+</html>
+
