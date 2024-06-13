@@ -18,8 +18,14 @@ Then the user can press the plus button again to clear the activity box and add 
 
 ### How it works:
 
-The project consists of 4 main files and 4 png files used to demonstrate the buttons and icons used.
-- `manifest.json` contains
-- `popup.html`
-- `popup.css`
-- `popup.js`
+The project consists of 4 main files:
+- `manifest.json`. This JSON file contains all the necessary information required to build the Chrome extension, while it contains an "action" key which declares the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the extension's action icon is clicked.
+- `popup.html`. This html file contains the code required to define the structure of the popup interface.
+- `popup.css`. This css file contains the necessary and custom styles used for the popup.html.
+- `popup.js`. This is the JavaScript file for the popup, used to add interactivity to the popup.html.
+
+Also, 4 png files were used to demonstrate the buttons and icons.
+- `plus.png`
+- `play.png`
+- `stop.png`
+- `timer.png`
