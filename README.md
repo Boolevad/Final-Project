@@ -11,6 +11,8 @@ It is a simple google chrome Timer extension that lets you keep track of your de
 After installing the extension, the user can add their desired activity by clicking the plus button and typing the name of the activity.
 [Adding an activity](https://github.com/Boolevad/Final-Project/blob/main/adding.mp4)
 
+![adding](https://github.com/Boolevad/Final-Project/assets/123184634/a84bbf94-1dd6-4c88-a269-9479f31e963c)
+
 Then the user can start the timer by clicking the play/pause button and underneath the activity box will be displayed the time elapsed, while the hourglass will start spinning.
 
 Pressing the stop button, both the timer and the hourglass reset to the starting position.
