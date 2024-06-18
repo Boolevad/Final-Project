@@ -6,7 +6,6 @@ This project was developed as my final project for Harvard University's [CS50x](
 It is a simple google chrome Timer extension that lets you keep track of your desired activity.
 
 ### How to use:
-**You can get the extension from here:**
 
 After installing the extension, the user can add their desired activity by clicking the plus button and typing the name of the activity.
 
