@@ -1,5 +1,5 @@
 # Timer Extension
-#### Video Demo:  (https://www.youtube.com/watch?v=_gTEabIcZKY)
+#### Video Demo:  [video](https://www.youtube.com/watch?v=_gTEabIcZKY)
 #### Description:
 This project was developed as my final project for Harvard University's [CS50x](https://cs50.harvard.edu/x/2024/) Introduction to Computer Science Course.
 
