@@ -34,3 +34,18 @@ Also, 4 png files were used to demonstrate the buttons and icons.
 - `play.png`
 - `stop.png`
 - `timer.png`
+
+### A deeper dive into the functions
+
+Some of the main functions used:
+1. `toggleSpin()` - This function handles the spinning effect
+3. `resetImage()` - This function resets bot the image and the timer 
+5. `toggleTimer()` - This function calculates the elapsed time
+6. `startTimer()` - This function starts the timer, ensuring that no existing interval is running
+7. `resetTimer()` - This function resets the timer
+8. `updateTimerDisplay()` - This function updates the timer diplay
+9. `pad()` - This function is used to change the time in the appropriate format
+10. `handlePlusButtonClick()` - This function enables the following operations:
+    - If the activity container is empty the plus button is disabled
+    - If the activity container is not empty, the plus button is enabled. By pressing it, it adds a new activity while enabling the start/pause and reset buttons
+    - If being pressed again, it clears the activity input and resets the plus button state
