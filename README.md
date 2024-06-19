@@ -5,7 +5,13 @@ This project was developed as my final project for Harvard University's [CS50x](
 
 It is a simple google chrome Timer extension that lets you keep track of your desired activity.
 
-### How to use:
+## Table Of Contents
+
+- [How to use](#how-to-use)
+- [How it works](#how-it-works)
+- [A deeper dive into the functions](#a-deeper-dive-into-the-functions)
+
+## How to use:
 
 After installing the extension, the user can add their desired activity by clicking the plus button and typing the name of the activity.
 
@@ -21,12 +27,14 @@ Pressing the stop button, both the timer and the hourglass reset to the starting
 
 Then the user can press the plus button again to clear the activity box and add a new activity.
 
-### How it works:
+## How it works:
+
+This project implements a timer with start/pause/reset functionality and an image that spins when the timer is running. The state of the timer and the image rotation is preserved using localStorage, ensuring that the state persists across page reloads and navigation.
 
 The project consists of 4 main files:
 - `manifest.json`. This JSON file contains all the necessary information required to build the Chrome extension, while it contains an "action" key which declares the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the extension's action icon is clicked.
-- `popup.html`. This html file contains the code required to define the structure of the popup interface.
-- `popup.css`. This css file contains the necessary and custom styles used for the popup.html.
+- `popup.html`. The HTML file contains elements for the timer, buttons for controlling the timer, and an input field for the activity.
+- `popup.css`. The CSS file provides basic styles for the timer, buttons, and rotating image.
 - `popup.js`. This is the JavaScript file for the popup, used to add interactivity to the popup.html.
 
 Also, 4 png files were used to demonstrate the buttons and icons.
@@ -35,7 +43,7 @@ Also, 4 png files were used to demonstrate the buttons and icons.
 - `stop.png`
 - `timer.png`
 
-### A deeper dive into the functions
+## A deeper dive into the functions
 
 Some of the main functions used:
 1. `toggleSpin()` - This function handles the spinning effect
@@ -49,3 +57,5 @@ Some of the main functions used:
     - If the activity container is empty the plus button is disabled
     - If the activity container is not empty, the plus button is enabled. By pressing it, it adds a new activity while enabling the start/pause and reset buttons
     - If being pressed again, it clears the activity input and resets the plus button state
+
+Also, event listeners were added to handle button clicks for starting, pausing, and resetting the timer, as well as managing the activity input and state.
