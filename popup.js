@@ -99,14 +99,12 @@ function toggleTimer() {
     startTimer();
   }
 }
-
 function startTimer() {
   timerRunning = true;
   clearInterval(timerInterval);  // Ensure no existing interval is running
   timerInterval = setInterval(() => {
     const currentTime = Math.floor(Date.now() / 1000);
-    elapsedSeconds = currentTime - startTime + parseInt(localStorage.getItem('elapsedSeconds') || '0', 10);
-    updateTimerDisplay();
+    updateTimerDisplay(currentTime);
   }, 1000);
   localStorage.setItem('timerRunning', timerRunning);
 }
@@ -120,10 +118,14 @@ function resetTimer() {
   localStorage.setItem('timerRunning', timerRunning);
 }
 
-function updateTimerDisplay() {
-  const hours = Math.floor(elapsedSeconds / 3600);
-  const minutes = Math.floor((elapsedSeconds % 3600) / 60);
-  const seconds = elapsedSeconds % 60;
+function updateTimerDisplay(currentTime) {
+  if (currentTime === undefined) {
+    currentTime = Math.floor(Date.now() / 1000);
+  }
+  const totalSeconds = elapsedSeconds + (timerRunning ? currentTime - startTime - elapsedSeconds: 0);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
   const formattedTime = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
   timerContainer.innerText = formattedTime;
 }
